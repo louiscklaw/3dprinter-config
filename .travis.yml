@@ -1,0 +1,6 @@
+
+os: linux
+dist: bionic
+
+script:
+  - echo "helloworld"
