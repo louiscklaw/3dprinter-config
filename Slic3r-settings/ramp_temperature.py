@@ -13,13 +13,21 @@ def float_range(start, stop, step):
 STEP='0.2'
 RAMP_LAYER_START=3
 
-START_TEMP=210; END_TEMP=193; RAMP_TEMP = list(reversed(list(float_range(END_TEMP,START_TEMP, STEP))))
+START_TEMP=210
+END_TEMP=193
+RAMP_TEMP = list(reversed(list(float_range(END_TEMP,START_TEMP, STEP))))
 
-LAYER_START=3;
+LAYER_START=3
 RAMP_LAYER = list(range(RAMP_LAYER_START, RAMP_LAYER_START+len(RAMP_TEMP),1))
 
-START_SPEED=65; END_SPEED=200; RAMP_SPEED = list(range(START_SPEED, END_SPEED, int(math.ceil((END_SPEED-START_SPEED)/len(RAMP_TEMP)))))
+START_SPEED=65
+END_SPEED=200
+RAMP_SPEED = list(range(START_SPEED, END_SPEED, int(math.ceil((END_SPEED-START_SPEED)/len(RAMP_TEMP)))))
 
+print('start temp : {}'.format(START_TEMP))
+print('final temp : {}'.format(END_TEMP))
+print('start speed: {}'.format(START_SPEED))
+print('final speed: {}'.format(END_SPEED))
 
 
 RAMP_TEMP.append(END_TEMP)
